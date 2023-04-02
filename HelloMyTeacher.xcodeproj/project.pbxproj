@@ -13,7 +13,7 @@
 		4892FC8129D987D40042D36C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4892FC7F29D987D40042D36C /* Main.storyboard */; };
 		4892FC8329D987D60042D36C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4892FC8229D987D60042D36C /* Assets.xcassets */; };
 		4892FC8629D987D60042D36C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4892FC8429D987D60042D36C /* LaunchScreen.storyboard */; };
-		4892FC8E29D9CED70042D36C /* GreetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4892FC8D29D9CED70042D36C /* GreetingViewController.swift */; };
+		4892FC8E29D9CED70042D36C /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4892FC8D29D9CED70042D36C /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		4892FC8229D987D60042D36C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4892FC8529D987D60042D36C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4892FC8729D987D60042D36C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4892FC8D29D9CED70042D36C /* GreetingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingViewController.swift; sourceTree = "<group>"; };
+		4892FC8D29D9CED70042D36C /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +61,7 @@
 				4892FC7929D987D40042D36C /* AppDelegate.swift */,
 				4892FC7B29D987D40042D36C /* SceneDelegate.swift */,
 				4892FC7D29D987D40042D36C /* LoginViewController.swift */,
-				4892FC8D29D9CED70042D36C /* GreetingViewController.swift */,
+				4892FC8D29D9CED70042D36C /* WelcomeViewController.swift */,
 				4892FC7F29D987D40042D36C /* Main.storyboard */,
 				4892FC8229D987D60042D36C /* Assets.xcassets */,
 				4892FC8429D987D60042D36C /* LaunchScreen.storyboard */,
@@ -144,7 +144,7 @@
 				4892FC7E29D987D40042D36C /* LoginViewController.swift in Sources */,
 				4892FC7A29D987D40042D36C /* AppDelegate.swift in Sources */,
 				4892FC7C29D987D40042D36C /* SceneDelegate.swift in Sources */,
-				4892FC8E29D9CED70042D36C /* GreetingViewController.swift in Sources */,
+				4892FC8E29D9CED70042D36C /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

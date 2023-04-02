@@ -84,10 +84,10 @@
             </objects>
             <point key="canvasLocation" x="109.59999999999999" y="-27.436281859070466"/>
         </scene>
-        <!--Greeting View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="DzJ-F5-4e3">
             <objects>
-                <viewController id="H7a-kJ-ocm" customClass="GreetingViewController" customModule="HelloMyTeacher" sceneMemberID="viewController">
+                <viewController id="H7a-kJ-ocm" customClass="WelcomeViewController" customModule="HelloMyTeacher" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f3L-Dy-s7u">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
