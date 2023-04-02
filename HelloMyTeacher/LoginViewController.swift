@@ -17,6 +17,10 @@ final class LoginViewController: UIViewController {
         greetingVC.username = userNameTF.text
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.view.endEditing(true)
+    }
+    
     @IBAction func unwind(for segue: UIStoryboardSegue) {
         userNameTF.text = ""
         passwordTF.text = ""
