@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GreetingViewController: UIViewController {
+final class GreetingViewController: UIViewController {
     
     @IBOutlet weak var usernameLabel: UILabel!
     
@@ -15,7 +15,21 @@ class GreetingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setGradientBackground()
         usernameLabel.text = username
     }
     
+    private func setGradientBackground() {
+        let gradientLayer = CAGradientLayer()
+        
+        gradientLayer.frame = view.bounds
+        gradientLayer.colors = [
+            UIColor.systemCyan.cgColor,
+            UIColor.systemFill.cgColor
+        ]
+        view.layer.insertSublayer(gradientLayer, at: 0)
+    }
 }
+    
+
+ 
