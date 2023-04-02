@@ -23,11 +23,19 @@ final class LoginViewController: UIViewController {
     }
 
     @IBAction func loginButtonTapped() {
-        
+        if userNameTF.text == "Alexey" && passwordTF.text == "Efimov" {
+            return
+        } else {
+            showAlert(withTitle: "Неправильно", andMessage: "Неправильно")
+        }
     }
     
     final private func showAlert(withTitle title: String, andMessage message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            self.passwordTF.text = ""
+        }
+        alert.addAction(okAction)
         present(alert, animated: true)
     }
     
