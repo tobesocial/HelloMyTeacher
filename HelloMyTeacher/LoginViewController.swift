@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  LoginViewController.swift
 //  HelloMyTeacher
 //
 //  Created by Дмитрий Федоров on 02.04.2023.
@@ -12,13 +12,17 @@ final class LoginViewController: UIViewController {
     @IBOutlet weak var userNameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     
+    private let user = "Alexey"
+    private let password = "Efimov"
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let greetingVC = segue.destination as? WelcomeViewController else { return }
-        greetingVC.username = userNameTF.text
+        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+        welcomeVC.username = user
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.view.endEditing(true)
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
@@ -27,23 +31,32 @@ final class LoginViewController: UIViewController {
     }
 
     @IBAction func loginButtonTapped() {
-        if userNameTF.text == "Alexey" && passwordTF.text == "Efimov" {
-            return
-        } else {
+        guard userNameTF.text == user, passwordTF.text == password else {
             showAlert(
                 withTitle: "Invalid login or password",
                 andMessage: "Please, enter correct login and password"
             )
+            return
         }
+        performSegue(withIdentifier: "showWelcomeVC", sender: "")
     }
     
-    @IBAction func forgotUserNameButtonPressed() {
-        showAlert(withTitle: "Oops!", andMessage: "Your name is Alexey 👨‍💻")
+    @IBAction func forgotRegisterData(_ sender: UIButton) {
+        sender.tag == 0
+            ? showAlert(withTitle: "Oops!", andMessage: "Your name is \(user) 👨‍💻")
+            : showAlert(withTitle: "Oops!", andMessage: "Your password is \(password) 👨‍💻")
     }
     
-    @IBAction func forgotPasswordButtonPressed() {
-        showAlert(withTitle: "Oops!", andMessage: "Your password is Efimov 👨‍💻")
-    }
+//    @IBAction func forgotUserNameButtonPressed() {
+//        showAlert(withTitle: "Oops!", andMessage: "Your name is \(user) 👨‍💻")
+//    }
+//    
+//    @IBAction func forgotPasswordButtonPressed() {
+//        showAlert(
+//            withTitle: "Oops!",
+//            andMessage: "Your password is \(password) 👨‍💻"
+//        )
+//    }
     
     private func showAlert(
         withTitle title: String,
