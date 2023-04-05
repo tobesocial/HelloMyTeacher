@@ -12,12 +12,32 @@ final class LoginViewController: UIViewController {
     @IBOutlet weak var userNameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     
+    let userMain = User.getUser()
+    
     private let user = "Alexey"
     private let password = "Efimov"
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        userNameTF.text = userMain.login
+        passwordTF.text = userMain.password
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.username = user
+        guard let tabBarController = segue.destination as? UITabBarController else { return }
+        guard let viewControllers = tabBarController.viewControllers else { return }
+        
+        viewControllers.forEach { viewController in
+            if let welcomeVC = viewController as? WelcomeViewController {
+                welcomeVC.username = userMain.login
+                welcomeVC.personName = userMain.person.name
+            } else if let personVC = viewController as? PersonViewController {
+                personVC.name = userMain.person.name
+            }
+        }
+//        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+//        welcomeVC.username = userMain.login
+//        welcomeVC.personName = userMain.person.name
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -31,14 +51,14 @@ final class LoginViewController: UIViewController {
     }
 
     @IBAction func loginButtonTapped() {
-        guard userNameTF.text == user, passwordTF.text == password else {
+        guard userNameTF.text == userMain.login, passwordTF.text == userMain.password else {
             showAlert(
                 withTitle: "Invalid login or password",
                 andMessage: "Please, enter correct login and password"
             )
             return
         }
-        performSegue(withIdentifier: "showWelcomeVC", sender: "")
+        performSegue(withIdentifier: "showWelcomeVC", sender: nil)
     }
     
     @IBAction func forgotRegisterData(_ sender: UIButton) {
@@ -46,17 +66,6 @@ final class LoginViewController: UIViewController {
             ? showAlert(withTitle: "Oops!", andMessage: "Your name is \(user) 👨‍💻")
             : showAlert(withTitle: "Oops!", andMessage: "Your password is \(password) 👨‍💻")
     }
-    
-//    @IBAction func forgotUserNameButtonPressed() {
-//        showAlert(withTitle: "Oops!", andMessage: "Your name is \(user) 👨‍💻")
-//    }
-//    
-//    @IBAction func forgotPasswordButtonPressed() {
-//        showAlert(
-//            withTitle: "Oops!",
-//            andMessage: "Your password is \(password) 👨‍💻"
-//        )
-//    }
     
     private func showAlert(
         withTitle title: String,
