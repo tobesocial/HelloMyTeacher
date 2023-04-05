@@ -22,10 +22,6 @@ final class WelcomeViewController: UIViewController {
         personNameLabel.text = "My name is \(personName ?? "") !"
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let personVC = segue.destination as? PersonViewController else { return }
-    }
-    
     private func setGradientBackground() {
         let gradientLayer = CAGradientLayer()
         

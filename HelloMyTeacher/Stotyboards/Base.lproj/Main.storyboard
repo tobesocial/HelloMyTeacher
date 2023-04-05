@@ -150,7 +150,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="H7a-kJ-ocm" kind="relationship" relationship="viewControllers" id="ZiD-7W-NYr"/>
-                        <segue destination="U5I-sG-rbB" kind="relationship" relationship="viewControllers" id="6s2-ld-bJZ"/>
+                        <segue destination="Y4N-Xg-eym" kind="relationship" relationship="viewControllers" id="KQ4-Vg-v5Y"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NS6-AF-gYL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -170,7 +170,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ous-b1-CTT">
-                                <rect key="frame" x="16" y="241" width="288" height="130"/>
+                                <rect key="frame" x="16" y="194.5" width="288" height="130"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dth-Yd-8wE">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="20.5"/>
@@ -207,6 +207,7 @@
                             <constraint firstItem="55M-vp-v6b" firstAttribute="trailing" secondItem="ous-b1-CTT" secondAttribute="trailing" constant="16" id="XBb-vY-qLh"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Dmitriy" image="person" catalog="system" id="KSs-5I-rTO"/>
                     <navigationItem key="navigationItem" title="Dmitriy Fedorov" id="3Og-8Y-pOa">
                         <barButtonItem key="rightBarButtonItem" title="Bio" id="HM5-wr-Yfr">
                             <connections>
@@ -223,14 +224,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mlw-W6-Cw6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1597.5" y="783.80281690140851"/>
+            <point key="canvasLocation" x="833" y="784"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="EsZ-Sj-60K">
             <objects>
                 <viewController id="rpC-0d-M5E" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1R1-yI-3ZW">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dmitriy Fedorov Bio" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="whv-eV-fH2">
@@ -261,26 +262,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aL1-C8-Sr2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2377.5" y="783.80281690140851"/>
-        </scene>
-        <!--Dmitriy Fedorov-->
-        <scene sceneID="D0B-rN-fTm">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Jss-tU-eWN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="U5I-sG-rbB" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Dmitriy Fedorov" image="person" catalog="system" id="84n-As-NpA"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="9Cp-Ai-K5e">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="92.5"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Y4N-Xg-eym" kind="relationship" relationship="rootViewController" id="VhW-Ir-Mwg"/>
-                    </connections>
-                </navigationController>
-            </objects>
-            <point key="canvasLocation" x="834.375" y="783.80281690140851"/>
+            <point key="canvasLocation" x="1575" y="784"/>
         </scene>
     </scenes>
     <resources>
