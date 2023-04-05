@@ -10,13 +10,20 @@ import UIKit
 final class WelcomeViewController: UIViewController {
     
     @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var personNameLabel: UILabel!
     
     var username: String!
+    var personName: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setGradientBackground()
-        usernameLabel.text = username
+        usernameLabel.text = "Welcome, \(username ?? "") !"
+        personNameLabel.text = "My name is \(personName ?? "") !"
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let personVC = segue.destination as? PersonViewController else { return }
     }
     
     private func setGradientBackground() {
